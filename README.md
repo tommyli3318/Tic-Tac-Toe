@@ -21,3 +21,4 @@ The minimax function performs the following actions:
 5. return the best value
 
 This game is made with JavaScript and styled with HTML & CSS
+The minimax algorithm is taken from [this article](https://www.freecodecamp.org/news/how-to-make-your-tic-tac-toe-game-unbeatable-by-using-the-minimax-algorithm-9d690bad4b37/)
