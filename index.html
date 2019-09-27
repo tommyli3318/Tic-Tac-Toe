@@ -28,8 +28,15 @@
 
         <div class="endgame">
             <div class="text"></div>
-            <button onClick="startGame()">Play Again</button>
+            <button onClick="startOption()">Play Again</button>
         </div>
+
+        <div class="startgame">
+            <div class="text">Go First?</div>
+            <button onClick="startGame(true)">Yes</button>
+            <button onClick="startGame(false)">No</button>
+        </div>
+
     </body>
 
     <script src="script.js"></script>

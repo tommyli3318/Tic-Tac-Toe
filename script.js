@@ -13,13 +13,16 @@ const winCombos = [
 ]
 
 const cells = document.querySelectorAll('.cell');
-startGame();
+startOption();
 
-// TODO: Allow a choice to go first or second
-
-function startGame() {
-	// take away the endgame screen
+function startOption() {
 	document.querySelector(".endgame").style.display = "none";
+	document.querySelector(".startgame").style.display = "block";
+}
+
+function startGame(huStart=true) {
+	// take away the endgame screen
+	document.querySelector(".startgame").style.display = "none";
 	
 	// creates an array of 9 for the board
 	board = Array.from(Array(9).keys());
@@ -30,6 +33,9 @@ function startGame() {
 		cells[i].style.removeProperty('background-color');
 		cells[i].addEventListener('click', turnClick, false);
 	}
+
+	// if ai starts, place randomly in squares 0-8
+	if (!huStart) turn(Math.floor(Math.random() * 9), aiPlayer)
 }
 
 function turnClick(square) {
@@ -47,7 +53,12 @@ function turn(squareId, player) {
 	document.getElementById(squareId).innerText = player;
 	// check win
 	let gameWon = checkWin(board, player)
-	if (gameWon) gameOver(gameWon)
+	if (gameWon) {
+		gameOver(gameWon)
+	} else {
+		checkTie()
+	}
+
 }
 
 function checkWin(board, player) {
