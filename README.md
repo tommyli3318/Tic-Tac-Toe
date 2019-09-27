@@ -1,5 +1,5 @@
 # Tic-Tac-Toe
-Tic Tac Toe game with an unbeatable AI
+Tic Tac Toe game with an unbeatable AI hosted at https://tommyli3318.github.io/Tic-Tac-Toe/
 
 The AI is implemented with the Minimax Algorithm
 
