@@ -35,7 +35,8 @@ function startGame(huStart=true) {
 	}
 
 	// if ai starts, place randomly in squares 0-8
-	if (!huStart) turn(Math.floor(Math.random() * 9), aiPlayer)
+	// if (!huStart) turn(Math.floor(Math.random() * 9), aiPlayer)
+	if (!huStart) turn(4, aiPlayer)
 }
 
 function turnClick(square) {
